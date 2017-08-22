@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {font-family: "Lato", sans-serif;}
+
+.tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+}
+
+
+.tablink:hover {
+    background-color: #777;
+}
+
+/* Style the tab content */
+.tabcontent {
+    color: black;
+    display: none;
+    padding: 50px;
+    text-align: center;
+}
+
+#Physics {background-color:red;}
+#Biology {background-color:green;}
+#Chemistry {background-color:yellow;}
+#Formulae {background-color:orange;}
+</style>
+</head>
+<body>
+
+<div id="Physics" class="tabcontent">
+  <h3>Physics ['fiz-iks']</h3>
+  <p>1.(Physics/General Physics) the branch of science</p>
+  <p>concerned with using extremely long and complicted</p>
+  <p>   formulas to describe how a ball rolls    </p>
+</div>
+
+<div id="Biology" class="tabcontent">
+  <h3>Biology ['bye-oh-law-gi']</h3>
+  <p>1. the branch of science associated with living creatures</p> 
+  <p>and solving problems which you did not know you had,</p>
+  <p>in a way you don't understand.</p>
+  <p>[See also wizard, magician]</p>
+</div>
+
+<div id="Chemistry" class="tabcontent">
+  <h3>Chemistry ['kem-uh-stree']</h3>
+  <p>1. a natural science that can be broken down into two major</p>
+  <p>categories- "blowing up stuff" and "making drugs".</p>
+</div>
+
+<div id="Formulae" class="tabcontent">
+  <h3>Formulae</h3>
+  <p>Times when the alphabets look drunk!</p>
+</div>
+
+<button class="tablink" onclick="openCity('Physics', this, 'red')" href= "physics.html" id="defaultOpen">Physics</button>
+<button class="tablink" onclick="openCity('Biology', this, 'green')">Biology</button>
+<button class="tablink" onclick="openCity('Chemistry', this, 'yellow')">Chemistry</button>
+<button class="tablink" onclick="openCity('Formulae', this, 'orange')">Formulae</button>
+
+<script>
+function openCity(cityName,elmnt,color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+    }
+    document.getElementById(cityName).style.display = "block";
+    elmnt.style.backgroundColor = color;
+
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+     
+</body>
+</html> 
